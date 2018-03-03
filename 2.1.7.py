@@ -7,9 +7,10 @@ def fnd(classes, parrent, child):
         return True
     else:
         for p in classes[child]:
-            if fnd(classes,parrent,p):
+            if fnd(classes, parrent, p):
                 return True
     return False
+
 
 ers = {}
 useders = []
@@ -27,5 +28,5 @@ for i in range(int(input())):
     else:
         useders.append(s)
         for ex in ers:
-            if fnd(ers,s,ex):
+            if fnd(ers, s, ex):
                 useders.append(ex)
